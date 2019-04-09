@@ -94,9 +94,7 @@
 		81B33D59225CD66400B16B6A /* Events */ = {
 			isa = PBXGroup;
 			children = (
-				81B33D5A225CD66400B16B6A /* AppDelegate.swift */,
-				81B33D61225CD66500B16B6A /* Assets.xcassets */,
-				81B33D63225CD66500B16B6A /* LaunchScreen.storyboard */,
+				81B33D7B225CE46500B16B6A /* Supporting Files */,
 				81B33D66225CD66500B16B6A /* Info.plist */,
 			);
 			path = Events;
@@ -109,6 +107,16 @@
 				81B33D71225CD66500B16B6A /* Info.plist */,
 			);
 			path = EventsTests;
+			sourceTree = "<group>";
+		};
+		81B33D7B225CE46500B16B6A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				81B33D5A225CD66400B16B6A /* AppDelegate.swift */,
+				81B33D61225CD66500B16B6A /* Assets.xcassets */,
+				81B33D63225CD66500B16B6A /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		8F3FC1D0BF3306CC4342279A /* Pods */ = {
