@@ -7,7 +7,7 @@ enum EventsApi {
 }
 
 extension EventsApi {
-    static let baseUrl = "http://5b840ba5db24a100142dcd8c.mockapi.io"
+    static let baseUrl = "https://5b840ba5db24a100142dcd8c.mockapi.io"
     
     var path: String {
         switch self {
