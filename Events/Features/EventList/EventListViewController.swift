@@ -10,6 +10,8 @@ final class EventListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Events"
+        
         setupTableView()
     }
     
