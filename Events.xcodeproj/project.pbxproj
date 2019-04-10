@@ -14,6 +14,11 @@
 		81788078225D105800E770CA /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81788077225D105800E770CA /* Coupon.swift */; };
 		8178807A225D124B00E770CA /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81788079225D124B00E770CA /* Person.swift */; };
 		8178807C225D1C5200E770CA /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8178807B225D1C5200E770CA /* Either.swift */; };
+		81788081225D203000E770CA /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8178807F225D203000E770CA /* EventListViewController.swift */; };
+		81788082225D203000E770CA /* EventListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81788080225D203000E770CA /* EventListViewController.xib */; };
+		81788085225D224700E770CA /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81788083225D224700E770CA /* EventTableViewCell.swift */; };
+		81788086225D224700E770CA /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81788084225D224700E770CA /* EventTableViewCell.xib */; };
+		81788089225D972B00E770CA /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81788088225D972B00E770CA /* UITableViewExtensions.swift */; };
 		81B33D5B225CD66400B16B6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B33D5A225CD66400B16B6A /* AppDelegate.swift */; };
 		81B33D62225CD66500B16B6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81B33D61225CD66500B16B6A /* Assets.xcassets */; };
 		81B33D65225CD66500B16B6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81B33D63225CD66500B16B6A /* LaunchScreen.storyboard */; };
@@ -44,6 +49,11 @@
 		81788077225D105800E770CA /* Coupon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coupon.swift; sourceTree = "<group>"; };
 		81788079225D124B00E770CA /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		8178807B225D1C5200E770CA /* Either.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Either.swift; sourceTree = "<group>"; };
+		8178807F225D203000E770CA /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
+		81788080225D203000E770CA /* EventListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventListViewController.xib; sourceTree = "<group>"; };
+		81788083225D224700E770CA /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		81788084225D224700E770CA /* EventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
+		81788088225D972B00E770CA /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		81B33D57225CD66400B16B6A /* Events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Events.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B33D5A225CD66400B16B6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81B33D61225CD66500B16B6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,6 +110,33 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		8178807D225D1FF200E770CA /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				8178807E225D1FFD00E770CA /* EventList */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		8178807E225D1FFD00E770CA /* EventList */ = {
+			isa = PBXGroup;
+			children = (
+				8178807F225D203000E770CA /* EventListViewController.swift */,
+				81788080225D203000E770CA /* EventListViewController.xib */,
+				81788083225D224700E770CA /* EventTableViewCell.swift */,
+				81788084225D224700E770CA /* EventTableViewCell.xib */,
+			);
+			path = EventList;
+			sourceTree = "<group>";
+		};
+		81788087225D970500E770CA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				81788088225D972B00E770CA /* UITableViewExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		81B33D4E225CD66400B16B6A = {
 			isa = PBXGroup;
 			children = (
@@ -123,7 +160,9 @@
 		81B33D59225CD66400B16B6A /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				8178807D225D1FF200E770CA /* Features */,
 				8178806E225D026100E770CA /* Model */,
+				81788087225D970500E770CA /* Extensions */,
 				81B33D7C225CF3A200B16B6A /* Networking */,
 				81B33D7B225CE46500B16B6A /* Supporting Files */,
 				81B33D66225CD66500B16B6A /* Info.plist */,
@@ -258,6 +297,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81788086225D224700E770CA /* EventTableViewCell.xib in Resources */,
+				81788082225D203000E770CA /* EventListViewController.xib in Resources */,
 				81B33D65225CD66500B16B6A /* LaunchScreen.storyboard in Resources */,
 				81B33D62225CD66500B16B6A /* Assets.xcassets in Resources */,
 			);
@@ -370,10 +411,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81788085225D224700E770CA /* EventTableViewCell.swift in Sources */,
 				81788070225D02D100E770CA /* EventsApiProvider.swift in Sources */,
 				81788072225D03E000E770CA /* Result.swift in Sources */,
+				81788089225D972B00E770CA /* UITableViewExtensions.swift in Sources */,
 				81B33D5B225CD66400B16B6A /* AppDelegate.swift in Sources */,
 				81788078225D105800E770CA /* Coupon.swift in Sources */,
+				81788081225D203000E770CA /* EventListViewController.swift in Sources */,
 				8178807C225D1C5200E770CA /* Either.swift in Sources */,
 				81788074225D0BED00E770CA /* AnyError.swift in Sources */,
 				81B33D7E225CF53E00B16B6A /* EventsApi.swift in Sources */,
