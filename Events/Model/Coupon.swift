@@ -5,3 +5,13 @@ struct Coupon: Decodable {
     let eventId: String
     let discount: Int
 }
+
+extension Coupon: Item {
+    var text: String {
+        return "Cupom: \(discount)%"
+    }
+    
+    var image: Image {
+        return .local("coupon")
+    }
+}

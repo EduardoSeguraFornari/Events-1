@@ -19,10 +19,12 @@ final class EventListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Events"
-        
         setupTableView()
-        
+        bindViewModel()
+    }
+    
+    private func bindViewModel() {
+        title = viewModel.title
         viewModel.fetchEvents { [tableView] (result) in
             switch result {
             case .success:
@@ -45,7 +47,7 @@ final class EventListViewController: UIViewController {
 
 // MARK: - UITableViewDelegate
 extension EventListViewController: UITableViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.selectEvent(at: indexPath)
     }
 }
