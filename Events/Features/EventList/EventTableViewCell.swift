@@ -1,5 +1,4 @@
 import UIKit
-import Kingfisher
 
 final class EventTableViewCell: UITableViewCell {
 
@@ -16,9 +15,7 @@ final class EventTableViewCell: UITableViewCell {
     private func configure(_ event: EventViewModel) {
         titleLabel.text = event.title
         descriptionLabel.text = event.description
-        
-        guard let url = URL(string: event.image) else { return }
-        iconImageView.kf.setImage(with: url)
+        iconImageView.loadImage(event.image)
     }
     
     override func awakeFromNib() {

@@ -1,10 +1,10 @@
 import Foundation
 import CoreLocation
 
-enum EventDetailSection {
+enum EventDetailRow {
     case image(String)
     case description(String)
-    case price(Double)
+    case price(String)
     case location(CLLocationCoordinate2D)
     case coupons([Coupon])
     case people([Person])
@@ -13,7 +13,7 @@ enum EventDetailSection {
 final class EventDetailViewModel {
     
     let apiProvider: EventsApiProvider
-    var sections: [EventDetailSection] = []
+    var rows: [EventDetailRow] = []
     let title: String
     let eventId: String
     
@@ -29,11 +29,11 @@ final class EventDetailViewModel {
             switch result {
             case .success(let event):
                 
-                self.sections.append(.image(event.image))
-                self.sections.append(.description(event.description))
-                self.sections.append(.price(event.price))
-                self.sections.append(.coupons(event.coupons))
-                self.sections.append(.people(event.people))
+                self.rows.append(.image(event.image))
+                self.rows.append(.description(event.description))
+                self.rows.append(.price("Preço: \(event.price)"))
+                self.rows.append(.coupons(event.coupons))
+                self.rows.append(.people(event.people))
                 
                 completion(.success(()))
             case .failure(let error):
