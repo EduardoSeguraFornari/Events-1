@@ -31,6 +31,11 @@
 		819CC0032260886E000C29C1 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CC0012260886E000C29C1 /* ImageTableViewCell.swift */; };
 		819CC0042260886E000C29C1 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 819CC0022260886E000C29C1 /* ImageTableViewCell.xib */; };
 		819CC00622609066000C29C1 /* UIImageView+loadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CC00522609066000C29C1 /* UIImageView+loadImage.swift */; };
+		819CC00A2260949A000C29C1 /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CC0082260949A000C29C1 /* CollectionTableViewCell.swift */; };
+		819CC00B2260949A000C29C1 /* CollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 819CC0092260949A000C29C1 /* CollectionTableViewCell.xib */; };
+		819CC00E22609899000C29C1 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CC00C22609899000C29C1 /* ItemCollectionViewCell.swift */; };
+		819CC00F22609899000C29C1 /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 819CC00D22609899000C29C1 /* ItemCollectionViewCell.xib */; };
+		819CC01122609A24000C29C1 /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CC01022609A24000C29C1 /* UICollectionViewExtensions.swift */; };
 		81B33D5B225CD66400B16B6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B33D5A225CD66400B16B6A /* AppDelegate.swift */; };
 		81B33D62225CD66500B16B6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81B33D61225CD66500B16B6A /* Assets.xcassets */; };
 		81B33D65225CD66500B16B6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81B33D63225CD66500B16B6A /* LaunchScreen.storyboard */; };
@@ -78,6 +83,11 @@
 		819CC0012260886E000C29C1 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		819CC0022260886E000C29C1 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
 		819CC00522609066000C29C1 /* UIImageView+loadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+loadImage.swift"; sourceTree = "<group>"; };
+		819CC0082260949A000C29C1 /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
+		819CC0092260949A000C29C1 /* CollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionTableViewCell.xib; sourceTree = "<group>"; };
+		819CC00C22609899000C29C1 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		819CC00D22609899000C29C1 /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		819CC01022609A24000C29C1 /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
 		81B33D57225CD66400B16B6A /* Events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Events.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B33D5A225CD66400B16B6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81B33D61225CD66500B16B6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -161,6 +171,7 @@
 			children = (
 				81788088225D972B00E770CA /* UITableViewExtensions.swift */,
 				819CC00522609066000C29C1 /* UIImageView+loadImage.swift */,
+				819CC01022609A24000C29C1 /* UICollectionViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -172,12 +183,24 @@
 				819CBFF8226071CE000C29C1 /* EventDetailViewController.xib */,
 				819CBFFB2260721D000C29C1 /* EventDetailViewModel.swift */,
 				81788075225D0DFC00E770CA /* EventDetail.swift */,
+				819CC00722609348000C29C1 /* Cells */,
+			);
+			path = EventDetail;
+			sourceTree = "<group>";
+		};
+		819CC00722609348000C29C1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
 				819CBFFD226085C8000C29C1 /* TextTableViewCell.swift */,
 				819CBFFE226085C8000C29C1 /* TextTableViewCell.xib */,
 				819CC0012260886E000C29C1 /* ImageTableViewCell.swift */,
 				819CC0022260886E000C29C1 /* ImageTableViewCell.xib */,
+				819CC0082260949A000C29C1 /* CollectionTableViewCell.swift */,
+				819CC0092260949A000C29C1 /* CollectionTableViewCell.xib */,
+				819CC00C22609899000C29C1 /* ItemCollectionViewCell.swift */,
+				819CC00D22609899000C29C1 /* ItemCollectionViewCell.xib */,
 			);
-			path = EventDetail;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		81B33D4E225CD66400B16B6A = {
@@ -344,8 +367,10 @@
 				819CC0042260886E000C29C1 /* ImageTableViewCell.xib in Resources */,
 				819CBFFA226071CE000C29C1 /* EventDetailViewController.xib in Resources */,
 				81788086225D224700E770CA /* EventTableViewCell.xib in Resources */,
+				819CC00B2260949A000C29C1 /* CollectionTableViewCell.xib in Resources */,
 				819CC000226085C8000C29C1 /* TextTableViewCell.xib in Resources */,
 				81788082225D203000E770CA /* EventListViewController.xib in Resources */,
+				819CC00F22609899000C29C1 /* ItemCollectionViewCell.xib in Resources */,
 				81B33D65225CD66500B16B6A /* LaunchScreen.storyboard in Resources */,
 				81B33D62225CD66500B16B6A /* Assets.xcassets in Resources */,
 			);
@@ -460,6 +485,7 @@
 			files = (
 				819CC0032260886E000C29C1 /* ImageTableViewCell.swift in Sources */,
 				81788085225D224700E770CA /* EventTableViewCell.swift in Sources */,
+				819CC00A2260949A000C29C1 /* CollectionTableViewCell.swift in Sources */,
 				81788070225D02D100E770CA /* EventsApiProvider.swift in Sources */,
 				81788072225D03E000E770CA /* Result.swift in Sources */,
 				81788089225D972B00E770CA /* UITableViewExtensions.swift in Sources */,
@@ -477,7 +503,9 @@
 				8178808D225E5BD100E770CA /* EventListViewModel.swift in Sources */,
 				8178808F225E628800E770CA /* EventViewModel.swift in Sources */,
 				819CC00622609066000C29C1 /* UIImageView+loadImage.swift in Sources */,
+				819CC01122609A24000C29C1 /* UICollectionViewExtensions.swift in Sources */,
 				819CBFF5226070DD000C29C1 /* Event.swift in Sources */,
+				819CC00E22609899000C29C1 /* ItemCollectionViewCell.swift in Sources */,
 				81788076225D0DFC00E770CA /* EventDetail.swift in Sources */,
 				81B33D80225CF5F600B16B6A /* User.swift in Sources */,
 			);

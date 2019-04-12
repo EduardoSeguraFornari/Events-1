@@ -71,6 +71,7 @@ extension EventDetailViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension EventDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let row = viewModel.rows[indexPath.row]
