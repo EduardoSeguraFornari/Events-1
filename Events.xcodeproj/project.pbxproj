@@ -20,6 +20,8 @@
 		81788086225D224700E770CA /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81788084225D224700E770CA /* EventTableViewCell.xib */; };
 		81788089225D972B00E770CA /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81788088225D972B00E770CA /* UITableViewExtensions.swift */; };
 		8178808B225E572900E770CA /* MainCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8178808A225E572900E770CA /* MainCoodinator.swift */; };
+		8178808D225E5BD100E770CA /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8178808C225E5BD100E770CA /* EventListViewModel.swift */; };
+		8178808F225E628800E770CA /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8178808E225E628800E770CA /* EventViewModel.swift */; };
 		81B33D5B225CD66400B16B6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B33D5A225CD66400B16B6A /* AppDelegate.swift */; };
 		81B33D62225CD66500B16B6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81B33D61225CD66500B16B6A /* Assets.xcassets */; };
 		81B33D65225CD66500B16B6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81B33D63225CD66500B16B6A /* LaunchScreen.storyboard */; };
@@ -56,6 +58,8 @@
 		81788084225D224700E770CA /* EventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
 		81788088225D972B00E770CA /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		8178808A225E572900E770CA /* MainCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoodinator.swift; sourceTree = "<group>"; };
+		8178808C225E5BD100E770CA /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
+		8178808E225E628800E770CA /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		81B33D57225CD66400B16B6A /* Events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Events.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B33D5A225CD66400B16B6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81B33D61225CD66500B16B6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -127,6 +131,8 @@
 				81788080225D203000E770CA /* EventListViewController.xib */,
 				81788083225D224700E770CA /* EventTableViewCell.swift */,
 				81788084225D224700E770CA /* EventTableViewCell.xib */,
+				8178808C225E5BD100E770CA /* EventListViewModel.swift */,
+				8178808E225E628800E770CA /* EventViewModel.swift */,
 			);
 			path = EventList;
 			sourceTree = "<group>";
@@ -426,6 +432,8 @@
 				81788074225D0BED00E770CA /* AnyError.swift in Sources */,
 				81B33D7E225CF53E00B16B6A /* EventsApi.swift in Sources */,
 				8178807A225D124B00E770CA /* Person.swift in Sources */,
+				8178808D225E5BD100E770CA /* EventListViewModel.swift in Sources */,
+				8178808F225E628800E770CA /* EventViewModel.swift in Sources */,
 				81788076225D0DFC00E770CA /* Event.swift in Sources */,
 				81B33D80225CF5F600B16B6A /* User.swift in Sources */,
 			);

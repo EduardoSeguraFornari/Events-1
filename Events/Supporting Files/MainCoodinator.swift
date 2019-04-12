@@ -14,7 +14,7 @@ protocol Navigator {
 extension UINavigationController: Navigator {}
 
 final class MainCoordinator: Coordinator {
-    var childCoordinators = [Coordinator]()
+    var childCoordinators: [Coordinator] = []
     var navigationController: Navigator
     let apiProvider = EventsApiProvider()
     
@@ -31,7 +31,8 @@ final class MainCoordinator: Coordinator {
     }
     
     func start() {
-        let viewController = EventListViewController()
+        let viewModel = EventListViewModel(apiProvider: apiProvider)
+        let viewController = EventListViewController(viewModel: viewModel)
         navigationController.pushViewController(viewController, animated: false)
     }
 }
