@@ -27,8 +27,13 @@ final class CollectionTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        setupCollectionView()
     }
     
+    private func setupCollectionView() {
+        collectionView.register(of: ItemCollectionViewCell.self)
+        collectionView.dataSource = self
+    }
 }
 
 extension CollectionTableViewCell: UICollectionViewDataSource {
@@ -38,7 +43,19 @@ extension CollectionTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        let cell: ItemCollectionViewCell = collectionView.dequeueReusableCell(cellForItemAt: indexPath)
+        let item = items[indexPath.row]
+        
+        cell.textLabel.text = item.text
+        
+        switch item.image {
+        case .remote(let url):
+            cell.imageView.loadImage(url)
+        case .local(let name):
+            cell.imageView.image = UIImage(named: name)
+        }
+        
+        return cell
     }
     
 }

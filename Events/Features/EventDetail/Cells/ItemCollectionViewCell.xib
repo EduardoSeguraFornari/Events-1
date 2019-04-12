@@ -20,14 +20,14 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0nh-8n-V5p">
-                        <rect key="frame" x="18" y="10" width="60" height="60"/>
+                        <rect key="frame" x="18" y="5" width="60" height="60"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="60" id="Tzw-e1-X8d"/>
                             <constraint firstAttribute="width" constant="60" id="rLf-r7-aog"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyW-AE-OdC">
-                        <rect key="frame" x="0.0" y="80" width="96" height="11"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="dyW-AE-OdC">
+                        <rect key="frame" x="0.0" y="75" width="96" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -37,13 +37,16 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="dyW-AE-OdC" secondAttribute="trailing" id="2Id-yB-bFC"/>
                 <constraint firstItem="dyW-AE-OdC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="2ZM-js-DeF"/>
-                <constraint firstItem="0nh-8n-V5p" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="Let-II-Fro"/>
+                <constraint firstItem="0nh-8n-V5p" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="Let-II-Fro"/>
                 <constraint firstItem="dyW-AE-OdC" firstAttribute="top" secondItem="0nh-8n-V5p" secondAttribute="bottom" constant="10" id="Ozl-DK-702"/>
-                <constraint firstAttribute="bottom" secondItem="dyW-AE-OdC" secondAttribute="bottom" constant="10" id="fkE-HJ-4rC"/>
                 <constraint firstItem="0nh-8n-V5p" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="fyr-ZJ-al6"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="96" height="101"/>
+            <connections>
+                <outlet property="imageView" destination="0nh-8n-V5p" id="90V-xk-epO"/>
+                <outlet property="textLabel" destination="dyW-AE-OdC" id="JMf-fl-D5b"/>
+            </connections>
             <point key="canvasLocation" x="174.40000000000001" y="139.880059970015"/>
         </collectionViewCell>
     </objects>

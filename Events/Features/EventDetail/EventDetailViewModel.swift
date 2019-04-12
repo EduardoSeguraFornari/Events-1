@@ -32,8 +32,13 @@ final class EventDetailViewModel {
                 self.rows.append(.image(event.image))
                 self.rows.append(.description(event.description))
                 self.rows.append(.price("Preço: \(event.price)"))
-                self.rows.append(.coupons(event.coupons))
-                self.rows.append(.people(event.people))
+                if !event.coupons.isEmpty {
+                    self.rows.append(.coupons(event.coupons))
+                }
+                
+                if !event.people.isEmpty {
+                    self.rows.append(.people(event.people))
+                }
                 
                 completion(.success(()))
             case .failure(let error):

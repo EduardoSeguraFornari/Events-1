@@ -41,6 +41,7 @@ final class EventDetailViewController: UIViewController {
     private func setupTableView() {
         tableView.register(of: ImageTableViewCell.self)
         tableView.register(of: TextTableViewCell.self)
+        tableView.register(of: CollectionTableViewCell.self)
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -65,6 +66,10 @@ extension EventDetailViewController: UITableViewDataSource {
             let cell: TextTableViewCell = tableView.dequeueReusableCell(for: indexPath)
             cell.textUILabel.text = text
             return cell
+        case .people(let items):
+            let cell: CollectionTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.items = items
+            return cell
         default:
             return UITableViewCell()
         }
@@ -77,10 +82,12 @@ extension EventDetailViewController: UITableViewDelegate {
         let row = viewModel.rows[indexPath.row]
         
         switch row {
-        case .image:
-            return 200
         case .description, .price:
             return UITableView.automaticDimension
+        case .image:
+            return 200
+        case .people, .coupons:
+            return 110
         default:
             return 100
         }
