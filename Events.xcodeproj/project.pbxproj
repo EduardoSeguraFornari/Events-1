@@ -26,6 +26,8 @@
 		819CBFF9226071CE000C29C1 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CBFF7226071CE000C29C1 /* EventDetailViewController.swift */; };
 		819CBFFA226071CE000C29C1 /* EventDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 819CBFF8226071CE000C29C1 /* EventDetailViewController.xib */; };
 		819CBFFC2260721D000C29C1 /* EventDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CBFFB2260721D000C29C1 /* EventDetailViewModel.swift */; };
+		819CBFFF226085C8000C29C1 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CBFFD226085C8000C29C1 /* TextTableViewCell.swift */; };
+		819CC000226085C8000C29C1 /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 819CBFFE226085C8000C29C1 /* TextTableViewCell.xib */; };
 		81B33D5B225CD66400B16B6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B33D5A225CD66400B16B6A /* AppDelegate.swift */; };
 		81B33D62225CD66500B16B6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81B33D61225CD66500B16B6A /* Assets.xcassets */; };
 		81B33D65225CD66500B16B6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81B33D63225CD66500B16B6A /* LaunchScreen.storyboard */; };
@@ -68,6 +70,8 @@
 		819CBFF7226071CE000C29C1 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		819CBFF8226071CE000C29C1 /* EventDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailViewController.xib; sourceTree = "<group>"; };
 		819CBFFB2260721D000C29C1 /* EventDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewModel.swift; sourceTree = "<group>"; };
+		819CBFFD226085C8000C29C1 /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
+		819CBFFE226085C8000C29C1 /* TextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
 		81B33D57225CD66400B16B6A /* Events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Events.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B33D5A225CD66400B16B6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81B33D61225CD66500B16B6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				81B33D7F225CF5F600B16B6A /* User.swift */,
-				81788075225D0DFC00E770CA /* EventDetail.swift */,
 				81788077225D105800E770CA /* Coupon.swift */,
 				81788079225D124B00E770CA /* Person.swift */,
 				819CBFF4226070DD000C29C1 /* Event.swift */,
@@ -161,6 +164,9 @@
 				819CBFF7226071CE000C29C1 /* EventDetailViewController.swift */,
 				819CBFF8226071CE000C29C1 /* EventDetailViewController.xib */,
 				819CBFFB2260721D000C29C1 /* EventDetailViewModel.swift */,
+				81788075225D0DFC00E770CA /* EventDetail.swift */,
+				819CBFFD226085C8000C29C1 /* TextTableViewCell.swift */,
+				819CBFFE226085C8000C29C1 /* TextTableViewCell.xib */,
 			);
 			path = EventDetail;
 			sourceTree = "<group>";
@@ -328,6 +334,7 @@
 			files = (
 				819CBFFA226071CE000C29C1 /* EventDetailViewController.xib in Resources */,
 				81788086225D224700E770CA /* EventTableViewCell.xib in Resources */,
+				819CC000226085C8000C29C1 /* TextTableViewCell.xib in Resources */,
 				81788082225D203000E770CA /* EventListViewController.xib in Resources */,
 				81B33D65225CD66500B16B6A /* LaunchScreen.storyboard in Resources */,
 				81B33D62225CD66500B16B6A /* Assets.xcassets in Resources */,
@@ -455,6 +462,7 @@
 				81B33D7E225CF53E00B16B6A /* EventsApi.swift in Sources */,
 				8178807A225D124B00E770CA /* Person.swift in Sources */,
 				819CBFF9226071CE000C29C1 /* EventDetailViewController.swift in Sources */,
+				819CBFFF226085C8000C29C1 /* TextTableViewCell.swift in Sources */,
 				8178808D225E5BD100E770CA /* EventListViewModel.swift in Sources */,
 				8178808F225E628800E770CA /* EventViewModel.swift in Sources */,
 				819CBFF5226070DD000C29C1 /* Event.swift in Sources */,

@@ -19,10 +19,12 @@ final class EventListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Events"
-        
         setupTableView()
-        
+        bindViewModel()
+    }
+    
+    private func bindViewModel() {
+        title = viewModel.title
         viewModel.fetchEvents { [tableView] (result) in
             switch result {
             case .success:

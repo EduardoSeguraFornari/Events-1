@@ -2,7 +2,7 @@ import Foundation
 
 enum EventsApi {
     case events
-    case event(id: Int)
+    case event(id: String)
     case checkin(user: User, eventId: String)
 }
 

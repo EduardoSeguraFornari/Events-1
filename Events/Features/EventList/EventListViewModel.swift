@@ -12,6 +12,7 @@ final class EventListViewModel {
     var count: Int {
         return events.count
     }
+    let title = "Events"
     
     subscript(_ index: Int) -> EventViewModel {
         return events[index]

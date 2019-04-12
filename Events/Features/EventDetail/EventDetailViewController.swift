@@ -2,6 +2,7 @@ import UIKit
 
 final class EventDetailViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
     let viewModel: EventDetailViewModel
     
     init(viewModel: EventDetailViewModel) {
@@ -17,15 +18,28 @@ final class EventDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupTableView()
+        bindViewModel()
+    }
+    
+    private func bindViewModel() {
+        
     }
 
+    private func setupTableView() {
+        tableView.dataSource = self
+    }
 }
 
 // MARK: - UITableViewDataSource
 extension EventDetailViewController: UITableViewDataSource {
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.sections.count
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return viewModel.sections.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
