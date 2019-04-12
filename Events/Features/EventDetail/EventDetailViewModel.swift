@@ -40,6 +40,11 @@ final class EventDetailViewModel {
                     self.rows.append(.people(event.people))
                 }
                 
+                let latitude: Double = event.latitude.left.flatMap(Double.init) ?? event.latitude.right ?? 0
+                let longitude: Double = event.longitude.left.flatMap(Double.init) ?? event.longitude.right ?? 0
+                
+                self.rows.append(.location(CLLocationCoordinate2D(latitude: latitude, longitude: longitude)))
+                
                 completion(.success(()))
             case .failure(let error):
                 completion(.failure(error))
