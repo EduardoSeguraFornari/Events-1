@@ -70,6 +70,10 @@ extension EventDetailViewController: UITableViewDataSource {
             let cell: CollectionTableViewCell = tableView.dequeueReusableCell(for: indexPath)
             cell.items = items
             return cell
+        case .coupons(let items):
+            let cell: CollectionTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.items = items
+            return cell
         default:
             return UITableViewCell()
         }
