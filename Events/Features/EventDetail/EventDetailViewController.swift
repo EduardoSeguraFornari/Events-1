@@ -21,7 +21,7 @@ final class EventDetailViewController: UIViewController {
 
 }
 
-//MARK: - UITableViewDataSource
+// MARK: - UITableViewDataSource
 extension EventDetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

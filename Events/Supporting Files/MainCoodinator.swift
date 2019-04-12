@@ -32,7 +32,20 @@ final class MainCoordinator: Coordinator {
     
     func start() {
         let viewModel = EventListViewModel(apiProvider: apiProvider)
+        viewModel.delegate = self
         let viewController = EventListViewController(viewModel: viewModel)
         navigationController.pushViewController(viewController, animated: false)
     }
+    
+}
+
+extension MainCoordinator: EventListViewModelDelegate {
+    
+    func didSelected(event: EventViewModel) {
+        let viewModel = EventDetailViewModel(event, apiProvider: apiProvider)
+        let viewController = EventDetailViewController(viewModel: viewModel)
+        
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
 }
