@@ -39,6 +39,7 @@ final class MainCoordinator: Coordinator {
     
 }
 
+// MARK: - EventListViewModelDelegate
 extension MainCoordinator: EventListViewModelDelegate {
     
     func didSelected(event: EventViewModel) {
@@ -48,4 +49,11 @@ extension MainCoordinator: EventListViewModelDelegate {
         navigationController.pushViewController(viewController, animated: true)
     }
     
+}
+
+// MARK: - EventDetailViewModelDelegate
+extension MainCoordinator: EventDetailViewModelDelegate {
+    func checkinActionTriggered(eventId: String) {
+        //TODO: Chamar CheckinViewController
+    }
 }

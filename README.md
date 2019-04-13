@@ -13,7 +13,7 @@ pod install
 - SwiftLint to enforce code style and conventions.
 
 ## To Do
-- [ ] Add MapKit to eventDetail
+
 - [ ] Create CheckinViewController and ViewModel
 - [ ] Make checkinAction
 

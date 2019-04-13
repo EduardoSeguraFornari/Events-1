@@ -10,12 +10,17 @@ enum EventDetailRow {
     case people([Person])
 }
 
+protocol EventDetailViewModelDelegate: AnyObject {
+    func checkinActionTriggered(eventId: String)
+}
+
 final class EventDetailViewModel {
     
     let apiProvider: EventsApiProvider
     var rows: [EventDetailRow] = []
     let title: String
     let eventId: String
+    weak var delegate: EventDetailViewModelDelegate?
     
     init(_ event: EventViewModel, apiProvider: EventsApiProvider) {
         self.apiProvider = apiProvider
