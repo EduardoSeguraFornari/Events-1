@@ -19,8 +19,25 @@ final class EventDetailViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.largeTitleDisplayMode = .never
+        
+        var buttons: [UIBarButtonItem] = []
+        
+        buttons.append(UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareAction)))
+        
+        buttons.append(UIBarButtonItem(title: "Check-in", style: .plain, target: self, action: #selector(checkinAction)))
+        
+        navigationItem.rightBarButtonItems = buttons
+        
         setupTableView()
         bindViewModel()
+    }
+    
+    @objc private func shareAction() {
+        viewModel.shareActionTrigger()
+    }
+    
+    @objc private func checkinAction() {
+        viewModel.checkinActionTrigger()
     }
     
     private func bindViewModel() {

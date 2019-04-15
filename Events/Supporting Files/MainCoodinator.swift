@@ -45,6 +45,7 @@ extension MainCoordinator: EventListViewModelDelegate {
     
     func didSelected(event: EventViewModel) {
         let viewModel = EventDetailViewModel(event, apiProvider: apiProvider)
+        viewModel.delegate = self
         let viewController = EventDetailViewController(viewModel: viewModel)
         
         navigationController.pushViewController(viewController, animated: true)
@@ -54,6 +55,12 @@ extension MainCoordinator: EventListViewModelDelegate {
 
 // MARK: - EventDetailViewModelDelegate
 extension MainCoordinator: EventDetailViewModelDelegate {
+    func shareActionTriggered(text: String) {
+        let activityViewController = UIActivityViewController(activityItems: [text], applicationActivities: nil)
+        
+        navigationController.present(activityViewController, animated: true, completion: nil)
+    }
+    
     func checkinActionTriggered(eventId: String) {
         let viewModel = CheckinViewModel(eventId: eventId, apiProvider: apiProvider)
         let viewController = CheckinViewController(viewModel: viewModel)

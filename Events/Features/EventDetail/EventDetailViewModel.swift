@@ -12,6 +12,7 @@ enum EventDetailRow {
 
 protocol EventDetailViewModelDelegate: AnyObject {
     func checkinActionTriggered(eventId: String)
+    func shareActionTriggered(text: String)
 }
 
 final class EventDetailViewModel {
@@ -39,6 +40,14 @@ final class EventDetailViewModel {
                 completion(.failure(error))
             }
         }
+    }
+    
+    func shareActionTrigger() {
+        delegate?.shareActionTriggered(text: "teste")
+    }
+    
+    func checkinActionTrigger() {
+        delegate?.checkinActionTriggered(eventId: eventId)
     }
     
     private func makeRows(_ event: EventDetail) {

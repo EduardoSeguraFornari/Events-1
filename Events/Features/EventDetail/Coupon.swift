@@ -8,7 +8,7 @@ struct Coupon: Decodable {
 
 extension Coupon: Item {
     var text: String {
-        return "Cupom: \(discount)%"
+        return "Cupom de R$: \(discount)%"
     }
     
     var image: Image {

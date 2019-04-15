@@ -17,5 +17,6 @@ final class CheckinViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.largeTitleDisplayMode = .never
     }
 }
