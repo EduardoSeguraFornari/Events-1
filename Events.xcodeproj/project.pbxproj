@@ -38,6 +38,9 @@
 		819CC01122609A24000C29C1 /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CC01022609A24000C29C1 /* UICollectionViewExtensions.swift */; };
 		819CC01B2261141D000C29C1 /* MapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CC0192261141D000C29C1 /* MapTableViewCell.swift */; };
 		819CC01C2261141D000C29C1 /* MapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 819CC01A2261141D000C29C1 /* MapTableViewCell.xib */; };
+		819CC0152260E2A9000C29C1 /* CheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CC0132260E2A9000C29C1 /* CheckinViewController.swift */; };
+		819CC0162260E2A9000C29C1 /* CheckinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 819CC0142260E2A9000C29C1 /* CheckinViewController.xib */; };
+		819CC0182260E507000C29C1 /* ChekinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CC0172260E507000C29C1 /* ChekinViewModel.swift */; };
 		81B33D5B225CD66400B16B6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B33D5A225CD66400B16B6A /* AppDelegate.swift */; };
 		81B33D62225CD66500B16B6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81B33D61225CD66500B16B6A /* Assets.xcassets */; };
 		81B33D65225CD66500B16B6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81B33D63225CD66500B16B6A /* LaunchScreen.storyboard */; };
@@ -92,6 +95,9 @@
 		819CC01022609A24000C29C1 /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
 		819CC0192261141D000C29C1 /* MapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTableViewCell.swift; sourceTree = "<group>"; };
 		819CC01A2261141D000C29C1 /* MapTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapTableViewCell.xib; sourceTree = "<group>"; };
+		819CC0132260E2A9000C29C1 /* CheckinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinViewController.swift; sourceTree = "<group>"; };
+		819CC0142260E2A9000C29C1 /* CheckinViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckinViewController.xib; sourceTree = "<group>"; };
+		819CC0172260E507000C29C1 /* ChekinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChekinViewModel.swift; sourceTree = "<group>"; };
 		81B33D57225CD66400B16B6A /* Events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Events.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B33D5A225CD66400B16B6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81B33D61225CD66500B16B6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -151,6 +157,7 @@
 		8178807D225D1FF200E770CA /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				819CC0122260E279000C29C1 /* Checkin */,
 				819CBFF62260719E000C29C1 /* EventDetail */,
 				8178807E225D1FFD00E770CA /* EventList */,
 			);
@@ -207,6 +214,16 @@
 				819CC01A2261141D000C29C1 /* MapTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		819CC0122260E279000C29C1 /* Checkin */ = {
+			isa = PBXGroup;
+			children = (
+				819CC0132260E2A9000C29C1 /* CheckinViewController.swift */,
+				819CC0142260E2A9000C29C1 /* CheckinViewController.xib */,
+				819CC0172260E507000C29C1 /* ChekinViewModel.swift */,
+			);
+			path = Checkin;
 			sourceTree = "<group>";
 		};
 		81B33D4E225CD66400B16B6A = {
@@ -376,6 +393,7 @@
 				819CC00B2260949A000C29C1 /* CollectionTableViewCell.xib in Resources */,
 				819CC000226085C8000C29C1 /* TextTableViewCell.xib in Resources */,
 				81788082225D203000E770CA /* EventListViewController.xib in Resources */,
+				819CC0162260E2A9000C29C1 /* CheckinViewController.xib in Resources */,
 				819CC00F22609899000C29C1 /* ItemCollectionViewCell.xib in Resources */,
 				81B33D65225CD66500B16B6A /* LaunchScreen.storyboard in Resources */,
 				819CC01C2261141D000C29C1 /* MapTableViewCell.xib in Resources */,
@@ -495,7 +513,9 @@
 				8178808B225E572900E770CA /* MainCoodinator.swift in Sources */,
 				81788081225D203000E770CA /* EventListViewController.swift in Sources */,
 				819CBFFC2260721D000C29C1 /* EventDetailViewModel.swift in Sources */,
+				819CC0182260E507000C29C1 /* ChekinViewModel.swift in Sources */,
 				8178807C225D1C5200E770CA /* Either.swift in Sources */,
+				819CC0152260E2A9000C29C1 /* CheckinViewController.swift in Sources */,
 				81788074225D0BED00E770CA /* AnyError.swift in Sources */,
 				81B33D7E225CF53E00B16B6A /* EventsApi.swift in Sources */,
 				8178807A225D124B00E770CA /* Person.swift in Sources */,

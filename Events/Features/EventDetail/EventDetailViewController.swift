@@ -77,6 +77,7 @@ extension EventDetailViewController: UITableViewDataSource {
             return cell
         case .location(let location):
             let cell: MapTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.title = viewModel.title
             cell.location = location
             return cell
         }
@@ -96,7 +97,7 @@ extension EventDetailViewController: UITableViewDelegate {
         case .people, .coupons:
             return 110
         case .location:
-            return 150
+            return 200
         }
     }
 }

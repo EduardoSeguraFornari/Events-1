@@ -33,27 +33,30 @@ final class EventDetailViewModel {
             guard let self = self else { return }
             switch result {
             case .success(let event):
-                
-                self.rows.append(.image(event.image))
-                self.rows.append(.description(event.description))
-                self.rows.append(.price("Preço: \(event.price)"))
-                if !event.coupons.isEmpty {
-                    self.rows.append(.coupons(event.coupons))
-                }
-                
-                if !event.people.isEmpty {
-                    self.rows.append(.people(event.people))
-                }
-                
-                let latitude: Double = event.latitude.left.flatMap(Double.init) ?? event.latitude.right ?? 0
-                let longitude: Double = event.longitude.left.flatMap(Double.init) ?? event.longitude.right ?? 0
-                
-                self.rows.append(.location(CLLocationCoordinate2D(latitude: latitude, longitude: longitude)))
-                
+                self.makeRows(event)
                 completion(.success(()))
             case .failure(let error):
                 completion(.failure(error))
             }
         }
+    }
+    
+    private func makeRows(_ event: EventDetail) {
+        self.rows.append(.image(event.image))
+        self.rows.append(.description(event.description))
+        self.rows.append(.price("Preço: \(event.price)"))
+        
+        if !event.coupons.isEmpty {
+            self.rows.append(.coupons(event.coupons))
+        }
+        
+        if !event.people.isEmpty {
+            self.rows.append(.people(event.people))
+        }
+        
+        let latitude: Double = event.latitude.left.flatMap(Double.init) ?? event.latitude.right ?? 0
+        let longitude: Double = event.longitude.left.flatMap(Double.init) ?? event.longitude.right ?? 0
+        
+        self.rows.append(.location(CLLocationCoordinate2D(latitude: latitude, longitude: longitude)))
     }
 }

@@ -15,6 +15,8 @@ final class ItemCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        imageView.layer.cornerRadius = 10
+        imageView.layer.masksToBounds = true
     }
 
 }

@@ -9,6 +9,7 @@ protocol Coordinator {
 
 protocol Navigator {
     func pushViewController(_ viewController: UIViewController, animated: Bool)
+    func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)?)
 }
 
 extension UINavigationController: Navigator {}
@@ -54,6 +55,9 @@ extension MainCoordinator: EventListViewModelDelegate {
 // MARK: - EventDetailViewModelDelegate
 extension MainCoordinator: EventDetailViewModelDelegate {
     func checkinActionTriggered(eventId: String) {
-        //TODO: Chamar CheckinViewController
+        let viewModel = CheckinViewModel(eventId: eventId, apiProvider: apiProvider)
+        let viewController = CheckinViewController(viewModel: viewModel)
+        
+        navigationController.present(viewController, animated: true, completion: nil)
     }
 }
