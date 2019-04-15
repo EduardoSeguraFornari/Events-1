@@ -1,5 +1,6 @@
 # Events
 ![](https://img.shields.io/badge/coverage-30.8%25-green.svg)
+
 As the main challenge was to create a fully working app in a short period of time, the UI was not prioritized. I decided to use the MVVM design pattern to keep the view controllers concise and to make the testing easier. Also, the coordinator pattern was used to control the flow of the application
 
 ## Installation
