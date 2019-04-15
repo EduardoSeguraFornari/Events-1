@@ -26,15 +26,17 @@ final class EventsApiProvider {
         
         request.httpBody = httpBody
         
-        session.dataTask(with: request) { (data, _, error) in
-            guard let data = data else {
-                completion(.failure(AnyError(error!)))
+        session.dataTask(with: request) { (_, _, error) in
+            guard error == nil else {
+                DispatchQueue.main.async {
+                    completion(.failure(AnyError(error!)))
+                }
                 return
             }
-            
-            print(String(data: data, encoding: .utf8))
-            completion(.success(()))
-        }
+            DispatchQueue.main.async {
+                completion(.success(()))
+            }
+        }.resume()
     }
     
     private func request<T: Decodable>(for url: URL, completion: @escaping (Result<T, AnyError>) -> Void) {
@@ -48,9 +50,13 @@ final class EventsApiProvider {
             jsonDecoder.dateDecodingStrategy = .millisecondsSince1970
             do {
                 let model = try jsonDecoder.decode(T.self, from: data)
-                completion(.success(model))
+                DispatchQueue.main.async {
+                    completion(.success(model))
+                }
             } catch {
-                completion(.failure(AnyError(error)))
+                DispatchQueue.main.async {
+                    completion(.failure(AnyError(error)))
+                }
             }
         }.resume()
     }

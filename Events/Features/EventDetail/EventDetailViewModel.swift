@@ -53,7 +53,7 @@ final class EventDetailViewModel {
     private func makeRows(_ event: EventDetail) {
         self.rows.append(.image(event.image))
         self.rows.append(.description(event.description))
-        self.rows.append(.price("Preço: \(event.price)"))
+        self.rows.append(.price("Preço: R$\(event.price)"))
         
         if !event.coupons.isEmpty {
             self.rows.append(.coupons(event.coupons))

@@ -22,9 +22,14 @@ final class EventDetailViewController: UIViewController {
         
         var buttons: [UIBarButtonItem] = []
         
-        buttons.append(UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareAction)))
+        buttons.append(UIBarButtonItem(barButtonSystemItem: .action,
+                                       target: self,
+                                       action: #selector(shareAction)))
         
-        buttons.append(UIBarButtonItem(title: "Check-in", style: .plain, target: self, action: #selector(checkinAction)))
+        buttons.append(UIBarButtonItem(title: "Check-in",
+                                       style: .plain,
+                                       target: self,
+                                       action: #selector(checkinAction)))
         
         navigationItem.rightBarButtonItems = buttons
         
@@ -43,14 +48,13 @@ final class EventDetailViewController: UIViewController {
     private func bindViewModel() {
         title = viewModel.title
         
-        viewModel.fetchEvents { [tableView] (result) in
+        viewModel.fetchEvents { [weak self] (result) in
+            guard let self = self else { return }
             switch result {
             case .success:
-                DispatchQueue.main.async {
-                    tableView?.reloadData()
-                }
-            case .failure:
-                break
+                self.tableView?.reloadData()
+            case .failure(let error):
+                self.showError(error)
             }
         }
     }
@@ -62,6 +66,7 @@ final class EventDetailViewController: UIViewController {
         tableView.register(of: MapTableViewCell.self)
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.tableFooterView = UIView()
     }
 }
 

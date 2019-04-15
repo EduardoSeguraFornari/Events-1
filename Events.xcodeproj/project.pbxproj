@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81099515226458BC002DEA45 /* UIViewController+showError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81099514226458BC002DEA45 /* UIViewController+showError.swift */; };
 		81788070225D02D100E770CA /* EventsApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8178806F225D02D100E770CA /* EventsApiProvider.swift */; };
 		81788072225D03E000E770CA /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81788071225D03E000E770CA /* Result.swift */; };
 		81788074225D0BED00E770CA /* AnyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81788073225D0BED00E770CA /* AnyError.swift */; };
@@ -46,7 +47,6 @@
 		81B33D65225CD66500B16B6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81B33D63225CD66500B16B6A /* LaunchScreen.storyboard */; };
 		81B33D70225CD66500B16B6A /* EventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B33D6F225CD66500B16B6A /* EventsTests.swift */; };
 		81B33D7E225CF53E00B16B6A /* EventsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B33D7D225CF53E00B16B6A /* EventsApi.swift */; };
-		81B33D80225CF5F600B16B6A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B33D7F225CF5F600B16B6A /* User.swift */; };
 		AE5D61664460B9A338EF76A4 /* Pods_EventsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F31CEBB7D10A6DC645FBCEF2 /* Pods_EventsTests.framework */; };
 		CDA2949FEB60D9845D2975EB /* Pods_Events.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED91B7C7BA237A1FA4CBB78 /* Pods_Events.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +64,7 @@
 /* Begin PBXFileReference section */
 		0DB00638637EF2E72E3D75D7 /* Pods-Events.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Events.debug.xcconfig"; path = "Target Support Files/Pods-Events/Pods-Events.debug.xcconfig"; sourceTree = "<group>"; };
 		68D0F6D1A7E91D112A209A0F /* Pods-Events.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Events.release.xcconfig"; path = "Target Support Files/Pods-Events/Pods-Events.release.xcconfig"; sourceTree = "<group>"; };
+		81099514226458BC002DEA45 /* UIViewController+showError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+showError.swift"; sourceTree = "<group>"; };
 		8178806F225D02D100E770CA /* EventsApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsApiProvider.swift; sourceTree = "<group>"; };
 		81788071225D03E000E770CA /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		81788073225D0BED00E770CA /* AnyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyError.swift; sourceTree = "<group>"; };
@@ -107,7 +108,6 @@
 		81B33D6F225CD66500B16B6A /* EventsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTests.swift; sourceTree = "<group>"; };
 		81B33D71225CD66500B16B6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81B33D7D225CF53E00B16B6A /* EventsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsApi.swift; sourceTree = "<group>"; };
-		81B33D7F225CF5F600B16B6A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B17CB876EF0CB024E6A0EE7A /* Pods-EventsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventsTests.debug.xcconfig"; path = "Target Support Files/Pods-EventsTests/Pods-EventsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BED91B7C7BA237A1FA4CBB78 /* Pods_Events.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Events.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5B2E6C9714616CD4EECE167 /* Pods-EventsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventsTests.release.xcconfig"; path = "Target Support Files/Pods-EventsTests/Pods-EventsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -143,10 +143,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8178806E225D026100E770CA /* Model */ = {
+		81099513226457D3002DEA45 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				81B33D7F225CF5F600B16B6A /* User.swift */,
+				81788077225D105800E770CA /* Coupon.swift */,
+				81788079225D124B00E770CA /* Person.swift */,
+				81788075225D0DFC00E770CA /* EventDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,6 +183,7 @@
 				81788088225D972B00E770CA /* UITableViewExtensions.swift */,
 				819CC00522609066000C29C1 /* UIImageView+loadImage.swift */,
 				819CC01022609A24000C29C1 /* UICollectionViewExtensions.swift */,
+				81099514226458BC002DEA45 /* UIViewController+showError.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -191,9 +194,7 @@
 				819CBFF7226071CE000C29C1 /* EventDetailViewController.swift */,
 				819CBFF8226071CE000C29C1 /* EventDetailViewController.xib */,
 				819CBFFB2260721D000C29C1 /* EventDetailViewModel.swift */,
-				81788077225D105800E770CA /* Coupon.swift */,
-				81788079225D124B00E770CA /* Person.swift */,
-				81788075225D0DFC00E770CA /* EventDetail.swift */,
+				81099513226457D3002DEA45 /* Model */,
 				819CC00722609348000C29C1 /* Cells */,
 			);
 			path = EventDetail;
@@ -250,7 +251,6 @@
 			isa = PBXGroup;
 			children = (
 				8178807D225D1FF200E770CA /* Features */,
-				8178806E225D026100E770CA /* Model */,
 				81788087225D970500E770CA /* Extensions */,
 				81B33D7C225CF3A200B16B6A /* Networking */,
 				81B33D7B225CE46500B16B6A /* Supporting Files */,
@@ -510,6 +510,7 @@
 				81788089225D972B00E770CA /* UITableViewExtensions.swift in Sources */,
 				81B33D5B225CD66400B16B6A /* AppDelegate.swift in Sources */,
 				81788078225D105800E770CA /* Coupon.swift in Sources */,
+				81099515226458BC002DEA45 /* UIViewController+showError.swift in Sources */,
 				8178808B225E572900E770CA /* MainCoodinator.swift in Sources */,
 				81788081225D203000E770CA /* EventListViewController.swift in Sources */,
 				819CBFFC2260721D000C29C1 /* EventDetailViewModel.swift in Sources */,
@@ -529,7 +530,6 @@
 				819CC01B2261141D000C29C1 /* MapTableViewCell.swift in Sources */,
 				819CC00E22609899000C29C1 /* ItemCollectionViewCell.swift in Sources */,
 				81788076225D0DFC00E770CA /* EventDetail.swift in Sources */,
-				81B33D80225CF5F600B16B6A /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CheckinViewController" customModule="Events" customModuleProvider="target">
             <connections>
+                <outlet property="emailTextField" destination="yjS-0l-io1" id="bd5-4m-Aab"/>
+                <outlet property="nameTextField" destination="SL1-HB-9tL" id="kC4-p0-si9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -32,10 +34,6 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" textContentType="email"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2z-mx-SnU">
-                    <rect key="frame" x="159.5" y="288" width="56" height="30"/>
-                    <state key="normal" title="Checkin"/>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5TY-sa-ojD">
                     <rect key="frame" x="10" y="70" width="355" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -53,12 +51,10 @@
             <constraints>
                 <constraint firstItem="5TY-sa-ojD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="2mm-wQ-Oxs"/>
                 <constraint firstItem="SL1-HB-9tL" firstAttribute="top" secondItem="5TY-sa-ojD" secondAttribute="bottom" constant="8" id="BaM-Y4-cay"/>
-                <constraint firstItem="s2z-mx-SnU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Dtw-cq-ZR5"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vFW-9F-mFd" secondAttribute="trailing" constant="10" id="HaK-gT-SA2"/>
                 <constraint firstItem="yjS-0l-io1" firstAttribute="top" secondItem="vFW-9F-mFd" secondAttribute="bottom" constant="8" id="IG6-73-2yI"/>
                 <constraint firstItem="5TY-sa-ojD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="YGx-ZX-8pV"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5TY-sa-ojD" secondAttribute="trailing" constant="10" id="aPb-bL-cEX"/>
-                <constraint firstItem="s2z-mx-SnU" firstAttribute="top" secondItem="yjS-0l-io1" secondAttribute="bottom" constant="85" id="bJ5-YU-lte"/>
                 <constraint firstItem="vFW-9F-mFd" firstAttribute="top" secondItem="SL1-HB-9tL" secondAttribute="bottom" constant="15" id="bKY-du-yBr"/>
                 <constraint firstItem="vFW-9F-mFd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="cDg-gv-nAi"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yjS-0l-io1" secondAttribute="trailing" constant="10" id="eLB-gc-f0Q"/>

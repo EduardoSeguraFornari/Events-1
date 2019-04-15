@@ -6,7 +6,7 @@ enum EventsApi {
 }
 
 enum EventsApiPost {
-    case checkin(user: User, eventId: String)
+    case checkin(name: String, email: String, eventId: String)
 }
 
 extension EventsApiPost {
@@ -21,10 +21,14 @@ extension EventsApiPost {
     
     var body: [String: Any] {
         switch self {
-        case let .checkin(user, eventId):
-            var body = user.asDictionary()
-            body["eventId"] = eventId
-            return body
+        case let .checkin(name, email, eventId):
+            var dict: [String: Any] = [:]
+            
+            dict["name"] = name
+            dict["email"] = email
+            dict["eventId"] = eventId
+            
+            return dict
         }
     }
     

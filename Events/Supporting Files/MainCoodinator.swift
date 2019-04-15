@@ -10,6 +10,7 @@ protocol Coordinator {
 protocol Navigator {
     func pushViewController(_ viewController: UIViewController, animated: Bool)
     func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)?)
+    func dismiss(animated flag: Bool, completion: (() -> Void)?)
 }
 
 extension UINavigationController: Navigator {}
@@ -63,8 +64,20 @@ extension MainCoordinator: EventDetailViewModelDelegate {
     
     func checkinActionTriggered(eventId: String) {
         let viewModel = CheckinViewModel(eventId: eventId, apiProvider: apiProvider)
+        viewModel.delegate = self
         let viewController = CheckinViewController(viewModel: viewModel)
+        let rootViewController = UINavigationController(rootViewController: viewController)
         
-        navigationController.present(viewController, animated: true, completion: nil)
+        navigationController.present(rootViewController, animated: true, completion: nil)
+    }
+}
+
+extension MainCoordinator: CheckinViewModelDelegate {
+    func cancelActionTriggered() {
+        navigationController.dismiss(animated: true, completion: nil)
+    }
+    
+    func doneActionTriggered() {
+        navigationController.dismiss(animated: true, completion: nil)
     }
 }

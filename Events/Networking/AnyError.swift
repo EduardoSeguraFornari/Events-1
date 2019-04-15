@@ -11,3 +11,9 @@ struct AnyError: Swift.Error {
         }
     }
 }
+
+extension AnyError: LocalizedError {
+    var localizedDescription: String {
+        return (error as? LocalizedError)?.localizedDescription ?? error.localizedDescription 
+    }
+}
