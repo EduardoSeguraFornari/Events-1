@@ -15,3 +15,15 @@ extension UIViewController {
         present(alert, animated: true, completion: nil)
     }
 }
+
+extension Navigator {
+    func showMessage(_ message: String) {
+        let alert = UIAlertController(title: "",
+                                      message: message,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK",
+                                      style: .default,
+                                      handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+}

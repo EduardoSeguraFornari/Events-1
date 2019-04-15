@@ -79,5 +79,6 @@ extension MainCoordinator: CheckinViewModelDelegate {
     
     func doneActionTriggered() {
         navigationController.dismiss(animated: true, completion: nil)
+        navigationController.showMessage("Check-in feito com sucesso.")
     }
 }
