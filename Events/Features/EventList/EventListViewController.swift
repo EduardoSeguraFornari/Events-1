@@ -25,14 +25,13 @@ final class EventListViewController: UIViewController {
     
     private func bindViewModel() {
         title = viewModel.title
-        viewModel.fetchEvents { [tableView] (result) in
+        viewModel.fetchEvents { [weak self] (result) in
+            guard let self = self else { return }
             switch result {
             case .success:
-                DispatchQueue.main.async {
-                    tableView?.reloadData()
-                }
+                self.tableView?.reloadData()
             case .failure(let error):
-                break
+                self.showError(error)
             }
         }
     }
@@ -41,6 +40,7 @@ final class EventListViewController: UIViewController {
         tableView.register(of: EventTableViewCell.self)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.tableFooterView = UIView()
     }
     
 }

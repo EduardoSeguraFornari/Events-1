@@ -19,21 +19,42 @@ final class EventDetailViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.largeTitleDisplayMode = .never
+        
+        var buttons: [UIBarButtonItem] = []
+        
+        buttons.append(UIBarButtonItem(barButtonSystemItem: .action,
+                                       target: self,
+                                       action: #selector(shareAction)))
+        
+        buttons.append(UIBarButtonItem(title: "Check-in",
+                                       style: .plain,
+                                       target: self,
+                                       action: #selector(checkinAction)))
+        
+        navigationItem.rightBarButtonItems = buttons
+        
         setupTableView()
         bindViewModel()
+    }
+    
+    @objc private func shareAction() {
+        viewModel.shareActionTrigger()
+    }
+    
+    @objc private func checkinAction() {
+        viewModel.checkinActionTrigger()
     }
     
     private func bindViewModel() {
         title = viewModel.title
         
-        viewModel.fetchEvents { [tableView] (result) in
+        viewModel.fetchEvents { [weak self] (result) in
+            guard let self = self else { return }
             switch result {
             case .success:
-                DispatchQueue.main.async {
-                    tableView?.reloadData()
-                }
-            case .failure:
-                break
+                self.tableView?.reloadData()
+            case .failure(let error):
+                self.showError(error)
             }
         }
     }
@@ -45,6 +66,7 @@ final class EventDetailViewController: UIViewController {
         tableView.register(of: MapTableViewCell.self)
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.tableFooterView = UIView()
     }
 }
 
@@ -77,6 +99,7 @@ extension EventDetailViewController: UITableViewDataSource {
             return cell
         case .location(let location):
             let cell: MapTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.title = viewModel.title
             cell.location = location
             return cell
         }
@@ -96,7 +119,7 @@ extension EventDetailViewController: UITableViewDelegate {
         case .people, .coupons:
             return 110
         case .location:
-            return 150
+            return 200
         }
     }
 }

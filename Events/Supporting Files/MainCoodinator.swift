@@ -9,6 +9,8 @@ protocol Coordinator {
 
 protocol Navigator {
     func pushViewController(_ viewController: UIViewController, animated: Bool)
+    func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)?)
+    func dismiss(animated flag: Bool, completion: (() -> Void)?)
 }
 
 extension UINavigationController: Navigator {}
@@ -44,6 +46,7 @@ extension MainCoordinator: EventListViewModelDelegate {
     
     func didSelected(event: EventViewModel) {
         let viewModel = EventDetailViewModel(event, apiProvider: apiProvider)
+        viewModel.delegate = self
         let viewController = EventDetailViewController(viewModel: viewModel)
         
         navigationController.pushViewController(viewController, animated: true)
@@ -53,7 +56,28 @@ extension MainCoordinator: EventListViewModelDelegate {
 
 // MARK: - EventDetailViewModelDelegate
 extension MainCoordinator: EventDetailViewModelDelegate {
+    func shareActionTriggered(text: String) {
+        let activityViewController = UIActivityViewController(activityItems: [text], applicationActivities: nil)
+        
+        navigationController.present(activityViewController, animated: true, completion: nil)
+    }
+    
     func checkinActionTriggered(eventId: String) {
-        //TODO: Chamar CheckinViewController
+        let viewModel = CheckinViewModel(eventId: eventId, apiProvider: apiProvider)
+        viewModel.delegate = self
+        let viewController = CheckinViewController(viewModel: viewModel)
+        let rootViewController = UINavigationController(rootViewController: viewController)
+        
+        navigationController.present(rootViewController, animated: true, completion: nil)
+    }
+}
+
+extension MainCoordinator: CheckinViewModelDelegate {
+    func cancelActionTriggered() {
+        navigationController.dismiss(animated: true, completion: nil)
+    }
+    
+    func doneActionTriggered() {
+        navigationController.dismiss(animated: true, completion: nil)
     }
 }

@@ -3,7 +3,40 @@ import Foundation
 enum EventsApi {
     case events
     case event(id: String)
-    case checkin(user: User, eventId: String)
+}
+
+enum EventsApiPost {
+    case checkin(name: String, email: String, eventId: String)
+}
+
+extension EventsApiPost {
+    static let baseUrl = "https://5b840ba5db24a100142dcd8c.mockapi.io"
+    
+    var path: String {
+        switch self {
+        case .checkin:
+            return "/api/checkin"
+        }
+    }
+    
+    var body: [String: Any] {
+        switch self {
+        case let .checkin(name, email, eventId):
+            var dict: [String: Any] = [:]
+            
+            dict["name"] = name
+            dict["email"] = email
+            dict["eventId"] = eventId
+            
+            return dict
+        }
+    }
+    
+    func makeUrl() -> URL? {
+        let components = URLComponents(string: EventsApi.baseUrl + path)
+        
+        return components?.url
+    }
 }
 
 extension EventsApi {
@@ -15,19 +48,6 @@ extension EventsApi {
             return "/api/events"
         case .event(let id):
             return "/api/events/\(id)"
-        case .checkin:
-            return "/api/checkin"
-        }
-    }
-    
-    var method: HttpMethod {
-        switch self {
-        case .events, .event:
-            return .get
-        case let .checkin(user, eventId):
-            var body = user.asDictionary()
-            body["eventId"] = eventId
-            return .post(body: body)
         }
     }
     
@@ -37,9 +57,4 @@ extension EventsApi {
         return components?.url
     }
     
-}
-
-enum HttpMethod {
-    case get
-    case post(body: [String: Any])
 }
