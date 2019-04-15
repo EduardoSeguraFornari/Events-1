@@ -43,7 +43,7 @@ final class EventDetailViewModel {
     }
     
     func shareActionTrigger() {
-        delegate?.shareActionTriggered(text: "teste")
+        delegate?.shareActionTriggered(text: "\(title)")
     }
     
     func checkinActionTrigger() {
