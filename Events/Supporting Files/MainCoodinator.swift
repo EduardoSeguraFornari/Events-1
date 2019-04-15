@@ -18,7 +18,8 @@ extension UINavigationController: Navigator {}
 final class MainCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     var navigationController: Navigator
-    let apiProvider = EventsApiProvider()
+    var checkinNavigationController: Navigator?
+    let apiProvider: EventsApiProviderType = EventsApiProvider()
     
     init(navigationController: Navigator) {
         self.navigationController = navigationController
@@ -67,18 +68,27 @@ extension MainCoordinator: EventDetailViewModelDelegate {
         viewModel.delegate = self
         let viewController = CheckinViewController(viewModel: viewModel)
         let rootViewController = UINavigationController(rootViewController: viewController)
+        checkinNavigationController = rootViewController
         
         navigationController.present(rootViewController, animated: true, completion: nil)
     }
 }
 
+// MARK: - CheckinViewModelDelegate
 extension MainCoordinator: CheckinViewModelDelegate {
+    func showMessage(_ message: String) {
+        checkinNavigationController?.showMessage(message)
+    }
+    
     func cancelActionTriggered() {
         navigationController.dismiss(animated: true, completion: nil)
+        checkinNavigationController = nil
     }
     
     func doneActionTriggered() {
-        navigationController.dismiss(animated: true, completion: nil)
-        navigationController.showMessage("Check-in feito com sucesso.")
+        checkinNavigationController = nil
+        navigationController.dismiss(animated: true) { [navigationController] in 
+            navigationController.showMessage("Check-in feito com sucesso.")
+        }
     }
 }

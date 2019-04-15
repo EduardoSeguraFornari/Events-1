@@ -10,12 +10,11 @@ pod install
 ```
 ## Third-party libraries
 - Kingfisher. Used to download and cache images.
-- SwiftLint to enforce code style and conventions.
+- SwiftLint. Used to enforce code style and conventions.
 
 ## To Do
 
-- [ ] Create CheckinViewController and ViewModel
-- [ ] Make checkinAction
+- [ ] 
 
 ## Requirements
 - iOS 12.1 or greater

@@ -42,16 +42,8 @@ final class CheckinViewController: UIViewController {
     }
     
     @objc private func doneAction() {
-        guard let name = nameTextField.text, !name.isEmpty else {
-            showMessage("Campo nome é obrigatório.")
-            return
-        }
-        
-        guard let email = emailTextField.text, !email.isEmpty else {
-            showMessage("Campo email é obrigatório.")
-            return
-        }
-        
+        let name = nameTextField.text ?? ""
+        let email = emailTextField.text ?? ""
         viewModel.doneActionTrigger(name: name, email: email)
     }
 }

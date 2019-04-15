@@ -5,7 +5,7 @@ protocol EventListViewModelDelegate: AnyObject {
 }
 
 final class EventListViewModel {
-    private let apiProvider: EventsApiProvider
+    private let apiProvider: EventsApiProviderType
     private var events: [EventViewModel] = []
     
     weak var delegate: EventListViewModelDelegate?
@@ -18,7 +18,7 @@ final class EventListViewModel {
         return events[index]
     }
     
-    init(apiProvider: EventsApiProvider) {
+    init(apiProvider: EventsApiProviderType) {
         self.apiProvider = apiProvider
     }
     

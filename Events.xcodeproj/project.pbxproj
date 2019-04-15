@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		81099515226458BC002DEA45 /* UIViewController+showError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81099514226458BC002DEA45 /* UIViewController+showError.swift */; };
+		8109951722646131002DEA45 /* EitherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8109951622646131002DEA45 /* EitherTests.swift */; };
+		8109951922646313002DEA45 /* MainCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8109951822646313002DEA45 /* MainCoordinatorTests.swift */; };
+		8109951B22646358002DEA45 /* MockNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8109951A22646358002DEA45 /* MockNavigator.swift */; };
+		8109951D22648BDD002DEA45 /* EventsApiProviderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8109951C22648BDD002DEA45 /* EventsApiProviderType.swift */; };
+		8109951F22648D47002DEA45 /* EventApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8109951E22648D47002DEA45 /* EventApiTests.swift */; };
+		8109952122648E87002DEA45 /* EventApiPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8109952022648E87002DEA45 /* EventApiPostTests.swift */; };
 		81788070225D02D100E770CA /* EventsApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8178806F225D02D100E770CA /* EventsApiProvider.swift */; };
 		81788072225D03E000E770CA /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81788071225D03E000E770CA /* Result.swift */; };
 		81788074225D0BED00E770CA /* AnyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81788073225D0BED00E770CA /* AnyError.swift */; };
@@ -45,7 +51,6 @@
 		81B33D5B225CD66400B16B6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B33D5A225CD66400B16B6A /* AppDelegate.swift */; };
 		81B33D62225CD66500B16B6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81B33D61225CD66500B16B6A /* Assets.xcassets */; };
 		81B33D65225CD66500B16B6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81B33D63225CD66500B16B6A /* LaunchScreen.storyboard */; };
-		81B33D70225CD66500B16B6A /* EventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B33D6F225CD66500B16B6A /* EventsTests.swift */; };
 		81B33D7E225CF53E00B16B6A /* EventsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B33D7D225CF53E00B16B6A /* EventsApi.swift */; };
 		AE5D61664460B9A338EF76A4 /* Pods_EventsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F31CEBB7D10A6DC645FBCEF2 /* Pods_EventsTests.framework */; };
 		CDA2949FEB60D9845D2975EB /* Pods_Events.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED91B7C7BA237A1FA4CBB78 /* Pods_Events.framework */; };
@@ -65,6 +70,12 @@
 		0DB00638637EF2E72E3D75D7 /* Pods-Events.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Events.debug.xcconfig"; path = "Target Support Files/Pods-Events/Pods-Events.debug.xcconfig"; sourceTree = "<group>"; };
 		68D0F6D1A7E91D112A209A0F /* Pods-Events.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Events.release.xcconfig"; path = "Target Support Files/Pods-Events/Pods-Events.release.xcconfig"; sourceTree = "<group>"; };
 		81099514226458BC002DEA45 /* UIViewController+showError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+showError.swift"; sourceTree = "<group>"; };
+		8109951622646131002DEA45 /* EitherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EitherTests.swift; sourceTree = "<group>"; };
+		8109951822646313002DEA45 /* MainCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorTests.swift; sourceTree = "<group>"; };
+		8109951A22646358002DEA45 /* MockNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNavigator.swift; sourceTree = "<group>"; };
+		8109951C22648BDD002DEA45 /* EventsApiProviderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsApiProviderType.swift; sourceTree = "<group>"; };
+		8109951E22648D47002DEA45 /* EventApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventApiTests.swift; sourceTree = "<group>"; };
+		8109952022648E87002DEA45 /* EventApiPostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventApiPostTests.swift; sourceTree = "<group>"; };
 		8178806F225D02D100E770CA /* EventsApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsApiProvider.swift; sourceTree = "<group>"; };
 		81788071225D03E000E770CA /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		81788073225D0BED00E770CA /* AnyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyError.swift; sourceTree = "<group>"; };
@@ -105,7 +116,6 @@
 		81B33D64225CD66500B16B6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81B33D66225CD66500B16B6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81B33D6B225CD66500B16B6A /* EventsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		81B33D6F225CD66500B16B6A /* EventsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTests.swift; sourceTree = "<group>"; };
 		81B33D71225CD66500B16B6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81B33D7D225CF53E00B16B6A /* EventsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsApi.swift; sourceTree = "<group>"; };
 		B17CB876EF0CB024E6A0EE7A /* Pods-EventsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventsTests.debug.xcconfig"; path = "Target Support Files/Pods-EventsTests/Pods-EventsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -262,8 +272,12 @@
 		81B33D6E225CD66500B16B6A /* EventsTests */ = {
 			isa = PBXGroup;
 			children = (
-				81B33D6F225CD66500B16B6A /* EventsTests.swift */,
 				81B33D71225CD66500B16B6A /* Info.plist */,
+				8109951622646131002DEA45 /* EitherTests.swift */,
+				8109951822646313002DEA45 /* MainCoordinatorTests.swift */,
+				8109951A22646358002DEA45 /* MockNavigator.swift */,
+				8109951E22648D47002DEA45 /* EventApiTests.swift */,
+				8109952022648E87002DEA45 /* EventApiPostTests.swift */,
 			);
 			path = EventsTests;
 			sourceTree = "<group>";
@@ -285,6 +299,7 @@
 			children = (
 				81B33D7D225CF53E00B16B6A /* EventsApi.swift */,
 				8178806F225D02D100E770CA /* EventsApiProvider.swift */,
+				8109951C22648BDD002DEA45 /* EventsApiProviderType.swift */,
 				81788071225D03E000E770CA /* Result.swift */,
 				81788073225D0BED00E770CA /* AnyError.swift */,
 			);
@@ -506,6 +521,7 @@
 				81788085225D224700E770CA /* EventTableViewCell.swift in Sources */,
 				819CC00A2260949A000C29C1 /* CollectionTableViewCell.swift in Sources */,
 				81788070225D02D100E770CA /* EventsApiProvider.swift in Sources */,
+				8109951D22648BDD002DEA45 /* EventsApiProviderType.swift in Sources */,
 				81788072225D03E000E770CA /* Result.swift in Sources */,
 				81788089225D972B00E770CA /* UITableViewExtensions.swift in Sources */,
 				81B33D5B225CD66400B16B6A /* AppDelegate.swift in Sources */,
@@ -537,7 +553,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81B33D70225CD66500B16B6A /* EventsTests.swift in Sources */,
+				8109951722646131002DEA45 /* EitherTests.swift in Sources */,
+				8109951F22648D47002DEA45 /* EventApiTests.swift in Sources */,
+				8109951922646313002DEA45 /* MainCoordinatorTests.swift in Sources */,
+				8109951B22646358002DEA45 /* MockNavigator.swift in Sources */,
+				8109952122648E87002DEA45 /* EventApiPostTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

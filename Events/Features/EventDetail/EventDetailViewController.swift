@@ -18,21 +18,7 @@ final class EventDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.largeTitleDisplayMode = .never
-        
-        var buttons: [UIBarButtonItem] = []
-        
-        buttons.append(UIBarButtonItem(barButtonSystemItem: .action,
-                                       target: self,
-                                       action: #selector(shareAction)))
-        
-        buttons.append(UIBarButtonItem(title: "Check-in",
-                                       style: .plain,
-                                       target: self,
-                                       action: #selector(checkinAction)))
-        
-        navigationItem.rightBarButtonItems = buttons
-        
+        setupNavigationItems()
         setupTableView()
         bindViewModel()
     }
@@ -59,6 +45,23 @@ final class EventDetailViewController: UIViewController {
         }
     }
 
+    private func setupNavigationItems() {
+        navigationItem.largeTitleDisplayMode = .never
+        
+        var buttons: [UIBarButtonItem] = []
+        
+        buttons.append(UIBarButtonItem(barButtonSystemItem: .action,
+                                       target: self,
+                                       action: #selector(shareAction)))
+        
+        buttons.append(UIBarButtonItem(title: "Check-in",
+                                       style: .plain,
+                                       target: self,
+                                       action: #selector(checkinAction)))
+        
+        navigationItem.rightBarButtonItems = buttons
+    }
+    
     private func setupTableView() {
         tableView.register(of: ImageTableViewCell.self)
         tableView.register(of: TextTableViewCell.self)

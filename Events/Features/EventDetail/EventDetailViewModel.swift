@@ -17,13 +17,13 @@ protocol EventDetailViewModelDelegate: AnyObject {
 
 final class EventDetailViewModel {
     
-    let apiProvider: EventsApiProvider
+    let apiProvider: EventsApiProviderType
     var rows: [EventDetailRow] = []
     let title: String
     let eventId: String
     weak var delegate: EventDetailViewModelDelegate?
     
-    init(_ event: EventViewModel, apiProvider: EventsApiProvider) {
+    init(_ event: EventViewModel, apiProvider: EventsApiProviderType) {
         self.apiProvider = apiProvider
         self.title = event.title
         self.eventId = event.id

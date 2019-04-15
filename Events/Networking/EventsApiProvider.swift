@@ -1,6 +1,6 @@
 import Foundation
 
-final class EventsApiProvider {
+final class EventsApiProvider: EventsApiProviderType {
     let session: URLSession
     
     init(session: URLSession = .shared) {
